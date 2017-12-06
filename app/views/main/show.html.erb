@@ -33,24 +33,21 @@
     </li>
   </div>
 
+
+
+<div class="loading">
+  <%= form_tag('/sources', method: "get", id: "submit-form", :action => 'show') do %>
+  <%= text_field_tag :search, params[:search], class: "searchbar", type: "hidden"%>
+  <%= submit_tag("Submit", class: "search") %>
+  <% end %>
+
+
+  <%if @url != nil%>
+  <%@feed.items.each do |item|%>
+  <%  @link_tag = "#{item.link}" %>
+  <%= link_to "#{item.title}", @link_tag %>
+  <br>
+    <%end%>
+  <%end%>
+</div>
 </section>
-
-<%= form_tag('/sources', method: "get", id: "submit-form") do %>
-<%= text_field_tag :search, params[:search_term], class: "searchbar", type: ""%>
-<%= submit_tag("Submit", class: "search-site") %>
-<% end %>
-
-
-<%@feed.items.each do |item|%>
-<%  @link_tag = "#{item.link}" %>
-<%= link_to "#{item.title}", @link_tag %>
-<br>
-<%end%>
-
-
-
-
-
-
-
-<p>hello</p>

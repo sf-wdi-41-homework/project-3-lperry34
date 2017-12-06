@@ -9,9 +9,9 @@ $(document).on('turbolinks:load', function() {
     $checks = $(":checkbox");
     $checks.on('change', function() {
         var string = $checks.filter(":checked").map(function(i,v){
-            return this.value + ",";
+            return this.value;
         }).get().join(" ");
-        firstValue = $('.searchbar').val(string);
+          $('.searchbar').val(string);
         $('.confirm').text("Your Ingredients:   " + $('.searchbar').val())
     }).trigger('change');
 
