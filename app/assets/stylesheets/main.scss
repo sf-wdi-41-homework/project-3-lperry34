@@ -3,6 +3,7 @@
 
 ul, nav{
 	list-style: none;
+	color: grey;
 }
 
 a{
@@ -94,7 +95,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: #fff;
+	color: grey;
 	padding: 35px 100px 0;
 }
 
@@ -353,7 +354,16 @@ footer p a{
 
 
 
+.row {
+    overflow: hidden;
+    padding: 5px;
+}
 
+.col {
+    float: left;
+    padding: 5px;
+    margin-right: 5px;
+}
 
 
 

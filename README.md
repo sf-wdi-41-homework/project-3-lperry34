@@ -1,24 +1,27 @@
-# README
+# News Bud
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A fully customizable news reader
 
-Things you may want to cover:
+### Technologies Used
 
-* Ruby version
+* Ruby
 
-* System dependencies
+* Ruby on Rails
 
-* Configuration
+* jQuery
 
-* Database creation
+* postgresql
 
-* Database initialization
+* HTML, CSS, JS
 
-* How to run the test suite
+### How To Use
 
-* Services (job queues, cache servers, search engines, etc.)
+* Clone this repo
 
-* Deployment instructions
+* bundle install
 
-* ...
+* open up terminal
+
+* rails s
+
+* Visit localhost:3000 in your browser

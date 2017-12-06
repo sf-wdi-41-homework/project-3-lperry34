@@ -1,0 +1,56 @@
+<section class="features">
+  <h3 class="title">Pick Your Favorite News Sources</h3>
+  <ul class="grid">
+    <li class="user-features">
+      <i class="fa fa-newspaper-o"></i>
+      <h4>Politics</h4>
+      <div class="row">
+      <div class="col"><label><input type="checkbox" value="http://rss.cnn.com/rss/cnn_allpolitics.rss">CNN</label></div>
+      <div class="col"><label><input type="checkbox" value="http://feeds.foxnews.com/foxnews/politics"> Fox News</label></div>
+      <div class="col"><label><input type="checkbox" value="http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"> New York Times</label></div>
+      <div class="col"><label><input type="checkbox" value="https://www.huffingtonpost.com/section/politics/feed"> Huff Post</label></div>
+      <div class="col"><label><input type="checkbox" value="http://rssfeeds.usatoday.com/UsatodaycomWashington-TopStories"> USA Today</label></div>
+      <div class="col"><label><input type="checkbox" value="http://feeds.reuters.com/Reuters/PoliticsNews"> Reuters</label></div>
+      <div class="col"><label><input type="checkbox" value="https://townhall.com/api/openaccess/news/politics-elections/"> Townhall</label></div>
+      <div class="col"><label><input type="checkbox" value="https://www.politico.com/rss/politics08.xml"> Politico</label></div>
+      <div class="col"><label><input type="checkbox" value="http://feeds.feedburner.com/DrudgeReportFeed"> Drudge Report</label></div>
+      <div class="col"><label><input type="checkbox" value="http://thehill.com/rss/syndicator/19110"> The Hill</label></div>
+      <div class="col"><label><input type="checkbox" value="https://www.washingtontimes.com/rss/headlines/news/inside-politics/"> Washington Times</label></div>
+      <div class="col"><label><input type="checkbox" value="http://feeds.washingtonpost.com/rss/rss_election-2012"> Washington Post</label></div>
+      <div class="col"><label><input type="checkbox" value="http://www.wsj.com/xml/rss/3_7041.xml"> WSJ</label></div>
+
+  </div>
+    </li>
+    <li class="user-features">
+      <i class="fa fa-newspaper-o"></i>
+      <h4>World News</h4>
+
+    </li>
+    <li class="user-features">
+      <i class="fa fa-newspaper-o"></i>
+      <h4>Tech</h4>
+
+    </li>
+  </div>
+
+</section>
+
+<%= form_tag('/sources', method: "get", id: "submit-form") do %>
+<%= text_field_tag :search, params[:search_term], class: "searchbar", type: ""%>
+<%= submit_tag("Submit", class: "search-site") %>
+<% end %>
+
+
+<%@feed.items.each do |item|%>
+<%  @link_tag = "#{item.link}" %>
+<%= link_to "#{item.title}", @link_tag %>
+<br>
+<%end%>
+
+
+
+
+
+
+
+<p>hello</p>
