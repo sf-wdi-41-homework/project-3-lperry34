@@ -6,12 +6,20 @@ require 'open-uri'
   end
 
   def show
-    @url = params[:search]
+    if params[:search]
+    @url = params[:search].split(' ')
+    puts @url
+  end
+    @feeds = []
     if @url == nil
       puts "hello"
     else
-        open(@url) do |rss|
+        @url.each do |rss|
+          puts @url
         @feed = RSS::Parser.parse(rss)
+        @feeds << @feed
+        puts @feeds.count
+
       end
     end
   end

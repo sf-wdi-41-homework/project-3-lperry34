@@ -12,7 +12,6 @@ $(document).on('turbolinks:load', function() {
             return this.value;
         }).get().join(" ");
           $('.searchbar').val(string);
-        $('.confirm').text("Your Ingredients:   " + $('.searchbar').val())
     }).trigger('change');
 
 $('.search-site').on('submit', function(e){
