@@ -1,5 +1,7 @@
 
-
+body{
+	background-color: #f7f7f7;
+}
 
 ul, nav{
 	list-style: none;
@@ -391,11 +393,40 @@ footer p a{
 	border-style: solid;
 	border-color: grey;
 	width: 40%;
-	height: 90vh;
+	height: auto;
 	margin-right: 5%;
 	margin-left: 5%;
 	margin-bottom: 5%;
+	position: relative;
 }
+
+@media (max-width: 1000px){
+
+	#single-link{
+		width: 70%;
+		text-align: center;
+	}
+}
+
+.post-button{
+	background-color: transparent;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px inset;
+    cursor: pointer;
+    padding: 5px;
+		float: right;
+		margin-right: 1%;
+		outline: none;
+}
+
+.post-button:hover{
+	background-color: #e3e4e5;
+	color: grey;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
 
 .search{
 	background-color: grey;
@@ -406,4 +437,17 @@ footer p a{
     text-decoration: none;
     font-size: 16px;
 		margin-top: 2%;
+}
+
+.post-title{
+	text-align: center;
+	margin-bottom: 3%;
+}
+
+
+
+.submit-button{
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
 }

@@ -57,9 +57,7 @@
       <div class="col"><label><input type="checkbox" value="https://www.wired.com/feed/rss"> WIRED</label></div>
       <div class="col"><label><input type="checkbox" value="https://www.technologyreview.com/topnews.rss"> MIT Tech</label></div>
 
-
-  </div>
-
+      </div>
     </li>
   </div>
 
@@ -70,15 +68,28 @@
       <% end %>
     </div>
   </section>
-    <%@feeds.each do |feed|%>
-    <%if feed != nil%>
+
+<div class="mobile-posts">
+<%@feeds.each do |feed|%>
+  <%if feed != nil%>
     <div id="single-link">
+      <h3 class="post-title"><%= "#{feed.channel.title}".first(20) %></h3>
       <%feed.items.first(10).each do |item|%>
-        <%  @link_tag = "#{item.link}" %>
-        <%= link_to "#{item.title}", @link_tag %>
-        <br>
-        <br>
+          <%  @link_tag = "#{item.link}" %>
+          <%= link_to "#{item.title}".first(50), @link_tag %>
+
+
+        <%= link_to save_path(:title => "#{item.title}", :link => "#{item.link}", :redirect_target => "/profile"), controller: 'main', action: 'save', method: :post do %>
+        <input class="post-button" type="button" value="Save Article">
+        <% end %>
+
+
+
+
+            <br>
+            <br>
         <%end%>
     <%end%>
   </div>
 <%end%>
+</div>

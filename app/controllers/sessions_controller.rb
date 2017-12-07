@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
           session[:user_id] = user.id
           redirect_to '/sources'
         else
+          puts user.errors.messages
           redirect_to '/login'
         end
       end

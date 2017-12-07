@@ -7,4 +7,7 @@ Rails.application.routes.draw do
       post '/signup' => 'user#create'
       get '/sources' => 'main#show'
       get '/read' => 'main#feed'
+      get '/profile' => 'user#show'
+      post '/save' => 'user#show', as: 'save'
+      get '/save' => 'user#show'
 end

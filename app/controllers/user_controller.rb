@@ -18,6 +18,12 @@ def create
       end
     end
 
+    def show
+        new_article = Article.new({:title => params[:title], :link => params[:link]})
+        current_user.articles << new_article
+        @articles = Article.find_by_title(params[:title])
+    end
+
   private
 
     def user_params

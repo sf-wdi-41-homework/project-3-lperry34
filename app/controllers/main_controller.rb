@@ -1,6 +1,8 @@
 class MainController < ApplicationController
 require 'rss'
 require 'open-uri'
+require 'crack/xml'
+
   def index
 
   end
@@ -17,10 +19,15 @@ require 'open-uri'
         @url.each do |rss|
           puts @url
         @feed = RSS::Parser.parse(rss)
+        @main = Crack::XML.parse(rss)
         @feeds << @feed
         puts @feeds.count
 
       end
     end
   end
+
+  
+
+
 end

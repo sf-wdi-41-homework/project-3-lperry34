@@ -13,6 +13,16 @@
 
   </head>
 
+
+<% if @current_user %>
+  <header>
+		<h2><a href="/">News Bud</a></h2>
+		<nav>
+			<li><a href="/logout">Logout</a></li>
+			<li><a href="/profile">profile</a></li>
+		</nav>
+	</header>
+  <% else %>
   <header>
 		<h2><a href="/">News Bud</a></h2>
 		<nav>
@@ -20,6 +30,7 @@
 			<li><a href="/signup">Signup</a></li>
 		</nav>
 	</header>
+  <%end%>
 
   <body>
     <%= yield %>
