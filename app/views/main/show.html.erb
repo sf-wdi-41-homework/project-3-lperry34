@@ -79,8 +79,8 @@
           <%= link_to "#{item.title}".first(50), @link_tag %>
 
 
-        <%= link_to save_path(:title => "#{item.title}", :link => "#{item.link}", :redirect_target => "/profile"), controller: 'main', action: 'save', method: :post do %>
-        <input class="post-button" type="button" value="Save Article">
+        <%= link_to save_path(:title => "#{item.title}", :link => "#{item.link}"), controller: 'user', action: 'article', method: :post do %>
+        <input class="post-button" type="button" value="Save Article" confirm="hello">
         <% end %>
 
 

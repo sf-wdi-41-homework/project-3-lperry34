@@ -8,7 +8,7 @@ def new
   @user = User.new
 end
 
-def create
+  def create
       user = User.new(user_params)
       if user.save
         session[:user_id] = user.id
@@ -19,13 +19,18 @@ def create
     end
 
     def show
-        new_article = Article.new({:title => params[:title], :link => params[:link]})
-        current_user.articles << new_article
-        @articles = Article.find_by_title(params[:title])
+      @articles = Article.all
     end
 
-  private
+    def article
+      new_article = Article.new({:title => params[:title], :link => params[:link]})
+      current_user.articles << new_article
+      @articles = Article.all
 
+    end
+
+
+  private
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end

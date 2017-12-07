@@ -8,6 +8,6 @@ Rails.application.routes.draw do
       get '/sources' => 'main#show'
       get '/read' => 'main#feed'
       get '/profile' => 'user#show'
-      post '/save' => 'user#show', as: 'save'
+      post '/save' => 'user#article', as: 'save'
       get '/save' => 'user#show'
 end
