@@ -27,24 +27,38 @@
       <div class="row">
       <div class="col"><label><input type="checkbox" value="http://rss.cnn.com/rss/cnn_world.rss">CNN</label></div>
       <div class="col"><label><input type="checkbox" value="http://feeds.foxnews.com/foxnews/world"> Fox News</label></div>
-      <div class="col"><label><input type="checkbox" value="https://www.boston.com/tag/world-news/feed"> The Boston Globe</label></div>
+      <div class="col"><label><input type="checkbox" value="http://abcnews.go.com/abcnews/internationalheadlines"> ABC News</label></div>
       <div class="col"><label><input type="checkbox" value="https://www.huffingtonpost.com/section/world-news/feed"> Huff Post</label></div>
-      <div class="col"><label><input type="checkbox" value="http://rssfeeds.usatoday.com/UsatodaycomWashington-TopStories"> The Blaze</label></div>
-      <div class="col"><label><input type="checkbox" value="http://feeds.reuters.com/Reuters/PoliticsNews"> Reuters</label></div>
-      <div class="col"><label><input type="checkbox" value="https://townhall.com/api/openaccess/news/politics-elections/"> Townhall</label></div>
-      <div class="col"><label><input type="checkbox" value="https://www.politico.com/rss/politics08.xml"> Politico</label></div>
-      <div class="col"><label><input type="checkbox" value="http://feeds.feedburner.com/DrudgeReportFeed"> Drudge Report</label></div>
-      <div class="col"><label><input type="checkbox" value="http://thehill.com/rss/syndicator/19110"> The Hill</label></div>
-      <div class="col"><label><input type="checkbox" value="https://www.washingtontimes.com/rss/headlines/news/inside-politics/"> Washington Times</label></div>
-      <div class="col"><label><input type="checkbox" value="http://feeds.washingtonpost.com/rss/rss_election-2012"> Washington Post</label></div>
-      <div class="col"><label><input type="checkbox" value="http://www.wsj.com/xml/rss/3_7041.xml"> WSJ</label></div>
+      <div class="col"><label><input type="checkbox" value="https://www.cnbc.com/id/100727362/device/rss/rss.html"> CNBC</label></div>
+      <div class="col"><label><input type="checkbox" value="http://feeds.reuters.com/Reuters/worldNews"> Reuters</label></div>
+      <div class="col"><label><input type="checkbox" value="https://townhall.com/api/openaccess/news/world/"> Townhall</label></div>
+      <div class="col"><label><input type="checkbox" value="http://feeds.bbci.co.uk/news/world/rss.xml?edition=uk"> BBC</label></div>
+      <div class="col"><label><input type="checkbox" value="http://feeds.washingtonpost.com/rss/world"> Washington Post</label></div>
+      <div class="col"><label><input type="checkbox" value="http://www.dailymail.co.uk/articles.rss"> Daily Mail</label></div>
+      <div class="col"><label><input type="checkbox" value="https://www.washingtontimes.com/rss/headlines/news/world/"> Washington Times</label></div>
+      <div class="col"><label><input type="checkbox" value="https://www.cbsnews.com/latest/rss/world"> CBS</label></div>
+      <div class="col"><label><input type="checkbox" value="http://www.wsj.com/xml/rss/3_7085.xml"> WSJ</label></div>
 
   </div>
     </li>
     <li class="user-features">
       <i class="fa fa-newspaper-o"></i>
       <h4>Tech</h4>
+      <div class="row">
+      <div class="col"><label><input type="checkbox" value="https://www.techrepublic.com/rssfeeds/articles/"> Tech Republic</label></div>
+      <div class="col"><label><input type="checkbox" value="http://feeds.arstechnica.com/arstechnica/technology-lab"> Ars Technica</label></div>
+      <div class="col"><label><input type="checkbox" value="http://rssfeeds.usatoday.com/usatoday-TechTopStories"> USA Today tech</label></div>
+      <div class="col"><label><input type="checkbox" value="http://feeds.reuters.com/reuters/technologyNews"> Reuters</label></div>
+      <div class="col"><label><input type="checkbox" value="https://c-8oqtgrjgwu46x24hggfux2ereocix2eeqo.g00.pcmag.com/g00/3_c-8yyy.reoci.eqo_/c-8OQTGRJGWU46x24jvvrux3ax2fx2fhggfu.reoci.eqox2fTuu.curzx2fUgevkqpCtvkengux3fugevkqpKfx3d3697_$/$/$?i10c.ua=1"> PC Mag</label></div>
+      <div class="col"><label><input type="checkbox" value="https://townhall.com/api/openaccess/news/sci-tech/"> Townhall</label></div>
+      <div class="col"><label><input type="checkbox" value="http://thehill.com/taxonomy/term/27/feed"> The Hill</label></div>
+      <div class="col"><label><input type="checkbox" value="http://www.techradar.com/rss"> Tech Radar</label></div>
+      <div class="col"><label><input type="checkbox" value="http://feeds.feedburner.com/TechCrunch/startups"> Tech Crunch</label></div>
+      <div class="col"><label><input type="checkbox" value="https://www.wired.com/feed/rss"> WIRED</label></div>
+      <div class="col"><label><input type="checkbox" value="https://www.technologyreview.com/topnews.rss"> MIT Tech</label></div>
 
+
+  </div>
 
     </li>
   </div>
@@ -55,14 +69,7 @@
       <%= submit_tag("Submit", class: "search") %>
       <% end %>
     </div>
-
-
-
   </section>
-
-
-
-
     <%@feeds.each do |feed|%>
     <%if feed != nil%>
     <div id="single-link">
