@@ -20,13 +20,15 @@ end
 
     def show
       @articles = Article.all
+      @user = User.connection.select_values(User.select("email").to_sql)
+
     end
 
     def article
       new_article = Article.new({:title => params[:title], :link => params[:link]})
       current_user.articles << new_article
       @articles = Article.all
-
+      
     end
 
 
