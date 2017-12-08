@@ -1,3 +1,10 @@
+body{
+  background-image: url(https://www.homeadvisor.com/images/consumer/hhi/hero-photos/city/SanFrancisco.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
 .signup{
   text-align: center;
   margin-top: 10%;
@@ -34,3 +41,32 @@
     display: inline-block;
     font-size: 16px;
   }
+
+
+  .profile-pic{
+  text-align: center;
+
+}
+
+.beth{
+  border-radius: 100%;
+}
+
+.info{
+  text-align: center;
+  margin-top: 1%;
+}
+.profile{
+
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10%;
+}
+.log{
+  color:white;
+}
+
+.saved{
+  text-align: center;
+}
