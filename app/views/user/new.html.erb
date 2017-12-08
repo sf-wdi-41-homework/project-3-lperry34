@@ -1,6 +1,7 @@
   <div class="signup">
       <h1>Signup</h1>
       <%= form_for :user, url: '/signup' do |f| %>
+      <%= f.text_field :name, placeholder: "Full Name", class: "email"%><br>
       <%= f.text_field :email, placeholder: "email address", class: "email"%><br>
       <%= f.password_field :password, placeholder: "Password", class: "password"%><br>
       <%= f.submit "Submit", class: "button" %>
