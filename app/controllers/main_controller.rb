@@ -22,12 +22,12 @@ require 'crack/xml'
         @main = Crack::XML.parse(rss)
         @feeds << @feed
         puts @feeds.count
-
+        puts @feeds
       end
     end
   end
 
-  
+
 
 
 end

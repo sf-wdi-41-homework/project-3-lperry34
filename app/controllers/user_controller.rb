@@ -21,11 +21,13 @@ end
     def show
       @articles = Article.all
       @user = User.connection.select_values(User.select("name"))
+      @user_email = User.find_by_email(params[:email])
+
 
     end
 
     def article
-      new_article = Article.new({:title => params[:title], :link => params[:link]})
+      new_article = Article.new({:title => params[:title], :link => params[:link], :description => params[:description]})
       current_user.articles << new_article
       @articles = Article.all
 

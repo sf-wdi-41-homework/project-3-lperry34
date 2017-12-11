@@ -11,7 +11,9 @@
                                   <div class="profile-pic">
                                       <img class="beth" height="200" src="https://cdn0.iconfinder.com/data/icons/avatars-3/512/avatar_hipster_guy-512.png">
                                     </div>
-                                    <h1 class="main-head-title"><%= @user %></h1>
+                                    <h1 class="main-head-title"><%= current_user.name %></h1>
+                                    <h2 class="main-email">Email: <%= current_user.email %></h2>
+                                    <a class="btn back" onclick="history.back()">Back To Reading</a>
                                 </div>
                             </div>
                         </div>
@@ -25,8 +27,10 @@
             <div class="container">
                 <!-- Example row of columns -->
                 <div class="row">
+                  <h1 id="saved-title">Your Saved Articles</h1>
                   <% @articles.each do |article| %>
-                    <li class="saved-articles"><strong><%= link_to article.title, article.link %> </strong></li>
+                    <li class="save-link"><strong><%= link_to article.title, article.link %> </strong></li><br>
+
                   <%end%>
                 </div>
             </div> <!-- /container -->

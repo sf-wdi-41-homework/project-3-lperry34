@@ -14,8 +14,6 @@ $(document).on('turbolinks:load', function() {
           $('.searchbar').val(string);
     }).trigger('change');
 
-$('.search-site').on('submit', function(e){
-    e.preventDefault();
 
-  })
+
 });
