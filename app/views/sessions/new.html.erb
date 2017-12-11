@@ -3,6 +3,9 @@
     <%= form_for :user, url: '/login' do |f| %>
     <%= f.text_field :email, placeholder: "email address", class: "email"%><br>
     <%= f.password_field :password, placeholder: "Password", class: "password"%><br>
+    <% if flash[:notice] %>
+        <div class="notice"><%= flash[:notice] %></div>
+      <% end %>
     <%= f.submit "Submit", class: "button" %>
     <% end %>
 </div>

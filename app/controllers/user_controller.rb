@@ -14,16 +14,13 @@ end
         session[:user_id] = user.id
         redirect_to '/login'
       else
+        flash[:notice] = "Email already taken or password is to short. Try Again"
         redirect_to '/signup'
       end
     end
 
     def show
       @articles = Article.all
-      @user = User.connection.select_values(User.select("name"))
-      @user_email = User.find_by_email(params[:email])
-
-
     end
 
     def article
