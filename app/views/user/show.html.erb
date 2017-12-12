@@ -26,15 +26,15 @@
 
         <!-- Sections -->
         <section id="about" class="sections3">
-            <div class="container">
+            <div class="container saved-menu">
                 <!-- Example row of columns -->
                 <div class="row">
                   <h1 id="saved-title">Your Saved Articles</h1>
                   <ul id="myUL">
                   <% @articles.each do |article| %>
-                    <li><%= link_to article.title, article.link%>
+                    <li class="individual-li"><%= link_to article.title.first(85), article.link%>
                       <%= link_to destroy_article_path(article), :method => :delete, :class => "stuff"  do %>
-                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash-o delete-icon" aria-hidden="true"></i>
                       <% end %>
                     </li>
 

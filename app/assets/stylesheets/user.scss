@@ -223,7 +223,7 @@
 
 
 /* Style the list items */
-ul li {
+#myUL, .individual-li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
@@ -239,14 +239,19 @@ ul li {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+#myUL, .individual-li:nth-child(odd) {
     background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-ul li:hover {
+#myUL, .individual-li:hover {
     background: #ddd;
 }
+
+  #myUL{
+    width: 90%;
+    margin: auto;
+  }
 
 .close {
     position: absolute;
@@ -280,6 +285,6 @@ ul li:hover {
 }
 
 
-.fa{
+.delete-icon{
   float: right;
 }
