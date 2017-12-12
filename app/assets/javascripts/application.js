@@ -17,6 +17,10 @@ $(document).on('turbolinks:load', function() {
     $('.choices').on("click", function(e){
       $('.waiting').html("");
     })
+
+    if($('.mobile-posts').html().length > 10){
+        $('.waiting').html("");
+    }
 });
 
 
