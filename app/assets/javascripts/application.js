@@ -16,16 +16,14 @@ $(document).on('turbolinks:load', function() {
 
 
 
-
-
-
     $('.choices').on("click", function(e){
       $('.waiting').html("");
     })
 
-    if($('.mobile-posts').html().length > 1){
-      console.log($('.mobile-posts').html())
-      $('.waiting').html("");
+    if($('.mobile-posts').html().length < 5){
+      $('.wait-img').attr('src', 'http://www.businessjournalng.com/wp-content/uploads/2015/05/People-reading-newspapers.jpg');
+  }else{
+    $('.waiting').html("");
   }
 
 });
