@@ -116,24 +116,19 @@
         <input type="checkbox" id="37" value="https://www.technologyreview.com/topnews.rss"/>
             <label for="37">Washington Times</label>
 
-            <div class="submit-button">
-              <%= form_tag('/sources', method: "get", id: "submit-form", :action => 'show') do %>
-              <%= text_field_tag :search, params[:search], class: "searchbar", type: "hidden"%>
-              <%= submit_tag("Submit", class: "search", onclick: "closeNav()") %>
-              <% end %>
+              <div class="submit-button">
+                <%= form_tag('/sources', method: "get", id: "submit-form", :action => 'show') do %>
+                <%= text_field_tag :search, params[:search], class: "searchbar", type: "hidden"%>
+                <%= submit_tag("Submit", class: "search", onclick: "closeNav()") %>
+                <% end %>
+              </div>
             </div>
           </div>
-        </div>
-
-
-
-    <div class="waiting">
-        <h2 id="news-bud">News Bud</h2>
-        <p id="paragraph">News Bud is the easiest way to read all your favorite news sources all in one place.</p>
-    </div>
-
-    <h1 class="choices" onclick="openNav()">Get Started</h1>
-
+          <div class="waiting">
+              <h2 id="news-bud">Lev News</h2>
+              <p id="paragraph">Lev News is the easiest way to read all your favorite news sources all in one place.</p>
+          </div>
+        <h1 class="choices" onclick="openNav()">Get Started</h1>
     </section>
 
 <div class="mobile-posts">

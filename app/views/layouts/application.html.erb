@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>News Bud | Fully Customizable News Reader</title>
+    <title>Lev News | Fully Customizable News Reader</title>
     <%= csrf_meta_tags %>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,7 +16,7 @@
 
 <% if current_user %>
   <header>
-		<h2><a href="/">News Bud</a></h2>
+		<h2><a href="/">Lev News</a></h2>
 		<nav>
       <li><a href="/sources">Your Feed</a></li>
 			<li><a href="/logout">Logout</a></li>
@@ -25,7 +25,7 @@
 	</header>
   <% else %>
   <header>
-		<h2><a href="/">News Bud</a></h2>
+		<h2><a href="/">Lev News</a></h2>
 		<nav>
 			<li><a href="/login">Login</a></li>
 			<li><a href="/signup">Signup</a></li>
@@ -35,9 +35,6 @@
 
   <body>
     <%= yield %>
-
-
-
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
