@@ -14,8 +14,18 @@ $(document).on('turbolinks:load', function() {
           $('.searchbar').val(string);
     }).trigger('change');
 
-    $('.carousel').carousel({
-    interval: 2000
-  })
+
+
+
+
+
+    $('.choices').on("click", function(e){
+      $('.waiting').html("");
+    })
+
+    if($('.mobile-posts').html().length > 1){
+      console.log($('.mobile-posts').html())
+      $('.waiting').html("");
+  }
 
 });
