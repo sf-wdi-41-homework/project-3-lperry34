@@ -14,6 +14,8 @@ $(document).on('turbolinks:load', function() {
           $('.searchbar').val(string);
     }).trigger('change');
 
-
+    $('.carousel').carousel({
+    interval: 2000
+  })
 
 });

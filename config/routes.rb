@@ -10,4 +10,5 @@ Rails.application.routes.draw do
       get '/profile' => 'user#show'
       post '/save' => 'user#article', as: 'save'
       get '/save' => 'user#show'
+      delete '/article/:id' => 'user#article_destroy', as: 'destroy_article'
 end

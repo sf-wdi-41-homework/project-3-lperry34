@@ -31,9 +31,15 @@
                 <div class="row">
                   <h1 id="saved-title">Your Saved Articles</h1>
                   <% @articles.each do |article| %>
-                    <li class="save-link"><strong><%= link_to article.title, article.link %> </strong></li><br>
 
-                  <%end%>
+                    <li class="save-link"><strong><%= link_to article.title, article.link%> </strong>
+                      <%= link_to destroy_article_path(article), :method => :delete, :class => "stuff"  do %>
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                      <% end %>
+                    </li>
+
+                  <% end %>
+
                 </div>
             </div> <!-- /container -->
         </section>
