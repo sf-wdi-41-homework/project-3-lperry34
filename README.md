@@ -2,7 +2,7 @@
 
 A fully customizable news reading app
 
-### App: [a link](http://levnews.herokuapp.com/)
+### App: [Use App Here](http://levnews.herokuapp.com/)
 
 ## What Is Lev News?
 What Lev News does is let you input your favorite news sources from varieties of categories. After you input your favorite sources Lev News will go our and fetch all of those companies RSS feeds in the form of XML. It will then parse through that XML and return to you the 10 latest links of that companies RSS feed. You can then click the link and it will take you directly to that article. If you love the article and want to show someone or use it later, you can save the article to your profile page.
@@ -31,4 +31,4 @@ What Lev News does is let you input your favorite news sources from varieties of
 
 * Enjoy
 
-### User Stories, Wireframes, and ERD's: [a link](### App: [a link](http://levnews.herokuapp.com/))
+### User Stories, Wireframes, and ERD's: [a link]((http://levnews.herokuapp.com/))
