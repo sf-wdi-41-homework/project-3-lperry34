@@ -17,10 +17,7 @@ $(document).on('turbolinks:load', function() {
     })
 
     $('.closebtn').on("click", function(e){
-      $('.waiting').html(`
-        <h2 id="news-bud">Lev News</h2>
-        <p id="paragraph">Lev News is the easiest way to read all your favorite news sources all in one place.</p>
-        `);
+      $('.waiting').html("");
     })
 
 });
