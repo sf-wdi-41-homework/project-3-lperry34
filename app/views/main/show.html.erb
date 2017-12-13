@@ -2,7 +2,7 @@
 
 
   <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav(); changeBack();">&times;</a>
 
       <h4 class="category">Politics</h4>
         <input type="checkbox" id="1" value="http://rss.cnn.com/rss/cnn_allpolitics.rss"/>
@@ -124,7 +124,7 @@
               </div>
             </div>
           </div>
-          <div class="waiting">
+          <div id="waiting">
               <h2 id="news-bud">Lev News</h2>
               <p id="paragraph">Lev News is the easiest way to read all your favorite news sources all in one place.</p>
           </div>
@@ -161,11 +161,11 @@ $checks.on('change', function() {
 }).trigger('change');
 
 $('.choices').on("click", function(e){
-  $('.waiting').html("");
+  $('#waiting').html("");
 })
 
 if($('.mobile-posts').html().length > 10){
-    $('.waiting').html("");
+    $('#waiting').html("");
 }
 });
 
