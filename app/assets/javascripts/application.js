@@ -6,15 +6,18 @@
 
 
 $(document).on('turbolinks:load', function() {
-    
+
     $('.navbar-toggle').on("click", function(e){
       $(".navbar-collapse").toggleClass("in");
     })
 
+    $('.demo').on("click", function(e){
+      $('.email').val("john@email.com")
+      $('.password').val("hellothere")
+    })
+
+
 });
-
-
-
 
 
 

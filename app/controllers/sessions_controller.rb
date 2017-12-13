@@ -8,7 +8,6 @@ class SessionsController < ApplicationController
           redirect_to '/sources'
         else
           flash[:notice] = "Wrong email or password"
-          puts user.errors.messages
           redirect_to '/login'
         end
       end
