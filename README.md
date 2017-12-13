@@ -31,4 +31,4 @@ What Lev News does is let you input your favorite news sources from varieties of
 
 * Enjoy
 
-[User Stories, Wireframes, and ERD's](http://levnews.herokuapp.com/)
+[User Stories, Wireframes, and ERD's](https://www.keepandshare.com/doc12/245018/lev-news-plans-pdf-388k?da=y)
