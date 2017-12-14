@@ -139,15 +139,15 @@
       <%feed.items.first(10).each do |item|%>
           <%  @link_tag = "#{item.link}" %>
           <%= link_to "#{item.title}".first(45), @link_tag %>
-        <%= link_to save_path(:title => "#{item.title}", :link => "#{item.link}", :description => "#{item.description}"), controller: 'user', action: 'article', method: :post, data: {confirm: "Are you sure?"} do %>
-        <input class="post-button" type="button" value="Save Article" confirm="hello">
+          <%= link_to save_path(:title => "#{item.title}", :link => "#{item.link}", :description => "#{item.description}"), controller: 'user', action: 'article', method: :post, data: {confirm: "Are you sure?"} do %>
+          <input class="post-button" type="button" value="Save Article" confirm="hello">
         <% end %>
+              <br>
             <br>
-          <br>
-        <%end%>
-    <%end%>
-  </div>
-<%end%>
+          <%end%>
+      <%end%>
+    </div>
+  <%end%>
 </div>
 
 <script>

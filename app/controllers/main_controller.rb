@@ -4,8 +4,9 @@ require 'open-uri'
 require 'crack/xml'
 
   def index
-
   end
+
+
 
   def show
     if params[:search]
@@ -26,8 +27,4 @@ require 'crack/xml'
       end
     end
   end
-
-
-
-
 end
